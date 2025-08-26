@@ -10,7 +10,10 @@ const Main = () => {
       setMovies(response.data.results);
     });
   }, []);
-  console.log(movie);
+  
+  const truncateString = (str,num) => {
+          return  str?.length > num ? str.slice(0,num) + '...' : str;
+  }
 
   return (
     <div className="w-full h-[550px] text-white">
@@ -27,14 +30,14 @@ const Main = () => {
           <button className="border bg-gray-300 text-black border-gray-300 py-3 px-5">
             Play
           </button>
-          <button className="ml-4 border  text-white py-3 px-5">
+          <button  className="ml-4 border  text-white py-3 px-5">
             Watch it later
           </button>
 
-          <p className="text-gray-400 text-sm">
+          <p className="text-red-300 text-sm">
             Released: {movie?.release_date}
           </p>
-          <p className="w-full md:max-w-[70%] xl:max-w-[35%] lg:max-w-[50%] text-gray-200">{movie?.overview}</p>
+          <p className="w-full md:max-w-[70%] xl:max-w-[35%] lg:max-w-[50%] text-gray-200">{truncateString(movie?.overview, 150)}</p>
         </div>
       </div>
     </div>
