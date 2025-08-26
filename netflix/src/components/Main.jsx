@@ -34,6 +34,7 @@ const Main = () => {
           <p className="text-gray-400 text-sm">
             Released: {movie?.release_date}
           </p>
+          <p className="w-full md:max-w-[70%] xl:max-w-[35%] lg:max-w-[50%] text-gray-200">{movie?.overview}</p>
         </div>
       </div>
     </div>
