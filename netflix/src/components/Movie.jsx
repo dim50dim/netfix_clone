@@ -5,7 +5,7 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 const Movie = ({item}) => {
       const [like, setLike] = useState(false);
   return (
-    <div className='flex'>
+    <div>
        <div
        
               className="w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block p-2 relative cursor-pointer"
@@ -23,7 +23,7 @@ const Movie = ({item}) => {
                   {like ? (
                     <FaHeart className="absolute top-4 left-4 text-gray-300" />
                   ) : (
-                    <FaRegHeart />
+                    <FaRegHeart className='absolute top-4 left-4 text-gray-300' />
                   )}
                 </p>
               </div>
