@@ -1,11 +1,16 @@
 import {useContext, createContext,useEffect, useState} from 'react'
-import {auth} from '../firebase.js';
-const AuthContext = createContext();
+import {auth} from "../firebase"
+console.log("AUTH OBJECT:",auth);
+
+
 import {
      createUserWithEmailAndPassword,
      signInWithEmailAndPassword,signOut,
      onAuthStateChanged 
     } from 'firebase/auth';
+
+    const AuthContext = createContext();
+
 export function AuthContextProvider({children}) {
     const [user,setUser] = useState({});
 
