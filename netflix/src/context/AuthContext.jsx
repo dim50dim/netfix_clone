@@ -1,6 +1,6 @@
 import {useContext, createContext,useEffect, useState} from 'react'
 import {auth} from "../firebase"
-console.log("AUTH OBJECT:",auth);
+
 
 
 import {

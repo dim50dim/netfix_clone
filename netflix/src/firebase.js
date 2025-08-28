@@ -6,7 +6,7 @@ import { getAuth } from "firebase/auth"; // ← Add this
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 
-console.log("API Key from Vite:", import.meta.env.VITE_FIREBASE_API_KEY);
+
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
