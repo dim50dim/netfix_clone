@@ -1,4 +1,4 @@
-const API_KEY = 'acd44edbeee7f1770df45d8dedd4ee27';
+const API_KEY = import.meta.env.VITE_FIREBASE_IMDB_API_KEY
 
 const requests = {
     requestPopular: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`,
